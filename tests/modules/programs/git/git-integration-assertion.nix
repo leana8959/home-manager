@@ -8,8 +8,8 @@ in
   programs = {
     delta = enable;
     # FIXME(leana8959): these two aren't caught by the tests.
-    # diff-highlight = enable;
-    # diff-so-fancy = enable;
+    diff-highlight = enable;
+    diff-so-fancy = enable;
     patdiff = enable;
   };
 
