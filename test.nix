@@ -65,7 +65,14 @@ in
           (
             { pkgs, lib, ... }:
             {
-              home.packages = [ pkgs.ghc pkgs.cabal-install ];
+              # Nothing -> no error, no compilation
+              # [cabal-install] -> wants ghc
+              # [ghc, cabal-install] -> needs hackage tarball
+              # [ghc] -> no error, no compilation
+              home.packages = [
+                # pkgs.ghc
+                pkgs.cabal-install
+              ];
 
               xsession = {
                 enable = true;
