@@ -65,6 +65,8 @@ in
           (
             { pkgs, lib, ... }:
             {
+              home.packages = [ pkgs.ghc pkgs.cabal-install ];
+
               xsession = {
                 enable = true;
                 windowManager.xmonad.enable = true;
