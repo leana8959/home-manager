@@ -72,7 +72,6 @@ in
 
               xdg.configFile."xmonad" = {
                 source = "${./xmonad}";
-                recursive = true;
               };
             }
           )
