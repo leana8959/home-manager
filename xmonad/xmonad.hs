@@ -1,6 +1,6 @@
 module Main where
 
-import XMonad
+import MyXmonad
 
 main :: IO ()
-main = xmonad def
+main = entryPoint
